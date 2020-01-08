@@ -1,6 +1,6 @@
 package Drinks;
 
-abstract class Drink {
+public abstract class Drink {
     private int priceInCoins = 0; //Prijs in munten.
     private double price = 0.0;
     private boolean isProcured = false;
