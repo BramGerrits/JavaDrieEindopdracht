@@ -4,6 +4,8 @@ public class Event {
     private String name;
     private HashSet<Visitor> visitors;
     private HashSet<Artist> artists;
+    private double costs = 0.0;
+    private double profit = 0.0;
 
     /**
      * The constructor for an event.
