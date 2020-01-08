@@ -9,11 +9,21 @@ public class Pub {
     private ArrayList<Drink> drinks;
 
     /**
+     * Constructor for the pub class
+     * @param name The name of the pub
+     * @param budget The start budget of the pub
+     */
+    public Pub(String name, double budget) {
+        this.name = name;
+        this.budget = budget;
+    }
+
+    /**
      * Gets the name of the pub.
      * @return Pub name
      */
     public String getName() {
-        return name;
+        return this.name;
     }
 
     /**
