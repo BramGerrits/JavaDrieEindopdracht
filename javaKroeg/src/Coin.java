@@ -1,4 +1,4 @@
-public class Coin {
+public class Coin implements Purchaseable {
     private final double price = 2.50;
 
     /**

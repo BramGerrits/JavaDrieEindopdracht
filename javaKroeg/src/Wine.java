@@ -1,6 +1,4 @@
-package Drinks;
-
-public class Wine extends Drink{
+public class Wine extends Drink {
     public Wine(){
         super(2.50);
     }

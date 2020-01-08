@@ -1,5 +1,3 @@
-import Drinks.Drink;
-
 import java.util.ArrayList;
 
 public class Visitor {
