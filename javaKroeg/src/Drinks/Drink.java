@@ -9,18 +9,17 @@ public abstract class Drink {
         this.price = price;
     }
 
+    /**
+     * Gets the price in euro's.
+     * @return
+     */
     public double getPrice(){
         return price;
     }
 
+    /**
+     * Gets the sound the drink makes when it is drank.
+     * @return drinking sound of the drink
+     */
     abstract String getDrinkSound();
-
-// Deze methodes vereisen objecten buiten de Drinks package en kunnen dus niet gebruikt worden.
-//    public void sellTo(Visitor visitor){
-//
-//    }
-//
-//    public void getOrderedBy(Pub pub){
-//
-//    }
 }
