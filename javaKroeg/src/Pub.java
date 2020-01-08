@@ -29,7 +29,7 @@ public class Pub {
      * @return double The total budget of the pub
      */
     public double getTotalBudget() {
-
+        return 0.0;
     }
 
     /**
@@ -37,7 +37,7 @@ public class Pub {
      * @return if the pub is bankrupt
      */
     public boolean checkIfBankrupt() {
-
+        return false;
     }
 
     /**
