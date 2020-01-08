@@ -6,4 +6,14 @@ public class LaChouffe extends Drink {
     public String getDrinkSound(){
         return "KLONK";
     }
+
+    @Override
+    public void orderedBy(Event event) {
+
+    }
+
+    @Override
+    public void sellTo(Visitor visitor) {
+
+    }
 }

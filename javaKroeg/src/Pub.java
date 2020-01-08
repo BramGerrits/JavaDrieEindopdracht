@@ -14,6 +14,8 @@ public class Pub {
     public Pub(String name, double budget) {
         this.name = name;
         this.budget = budget;
+        this.events = new ArrayList<Event>();
+        this.drinks = new ArrayList<Drink>();
     }
 
     /**
@@ -29,7 +31,7 @@ public class Pub {
      * @param event Event object
      */
     public void addEvent(Event event) {
-
+        this.events.add(event);
     }
 
     /**
@@ -37,7 +39,7 @@ public class Pub {
      * @return double The total budget of the pub
      */
     public double getTotalBudget() {
-        return 0.0;
+        return this.budget;
     }
 
     /**

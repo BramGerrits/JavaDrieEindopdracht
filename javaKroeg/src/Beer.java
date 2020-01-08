@@ -6,4 +6,14 @@ public class Beer extends Drink {
     public String getDrinkSound(){
         return "KLONKLONKLONKLONKLOK";
     }
+
+    @Override
+    public void orderedBy(Event event) {
+
+    }
+
+    @Override
+    public void sellTo(Visitor visitor) {
+
+    }
 }

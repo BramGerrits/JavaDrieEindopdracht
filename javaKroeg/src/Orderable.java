@@ -1,4 +1,4 @@
 public interface Orderable {
     public double getPrice();
-    public void getOrderedBy(Event event);
+    public void orderedBy(Event event);
 }

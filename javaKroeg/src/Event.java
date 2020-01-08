@@ -11,6 +11,8 @@ public class Event {
      */
     public Event(String name) {
         this.name = name;
+        this.visitors = new HashSet<Visitor>();
+        this.artists = new HashSet<Artist>();
     }
 
     /**
@@ -21,12 +23,8 @@ public class Event {
         return this.name;
     }
 
-    /**
-     * Hires an artist and lets the pub pay for the artist.
-     * @param artist What artist is going to preform at the pub
-     */
-    public void hireArtist(Artist artist) {
-
+    public HashSet<Artist> getArtists() {
+        return this.artists;
     }
 
     /**
@@ -34,7 +32,7 @@ public class Event {
      * @param visitor Visitor Object
      */
     public void addVisitor(Visitor visitor) {
-
+        visitors.add(visitor);
     }
 
     /**
@@ -42,6 +40,12 @@ public class Event {
      * @return The amount of visitors at the event
      */
     public int getAmountOfVisitors() {
+        return this.visitors.size();
+    }
 
+    public void printAllArtistForEvent(){
+        for (Artist artist : artists) {
+            System.out.println(artist.getName() + " - " + artist.getPrice());
+        }
     }
 }

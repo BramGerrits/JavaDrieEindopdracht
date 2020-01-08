@@ -6,4 +6,14 @@ public class Wine extends Drink {
     public String getDrinkSound(){
         return "SLUUUUUUUUUUUUUURP";
     }
+
+    @Override
+    public void orderedBy(Event event) {
+
+    }
+
+    @Override
+    public void sellTo(Visitor visitor) {
+
+    }
 }
