@@ -6,6 +6,11 @@ abstract class Drink {
     private boolean isProcured = false;
     private boolean isOrdered = false;
 
+    public Drink(int priceInCoins, double price){
+        this.priceInCoins = priceInCoins;
+        this.price = price;
+    }
+
     public double getPrice(){
         return price;
     }
@@ -14,6 +19,9 @@ abstract class Drink {
         return priceInCoins;
     }
 
+    abstract String getDrinkSound();
+
+// Deze methodes vereisen objecten buiten de Drinks package en kunnen dus niet gebruikt worden.
 //    public void sellTo(Visitor visitor){
 //
 //    }
