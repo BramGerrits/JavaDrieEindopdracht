@@ -24,6 +24,7 @@ public class Artist implements Orderable{
      * Gets the price that the pub has to pay for hiring an artist.
      * @return The price of the artist
      */
+    @Override
     public double getPrice() {
         return this.price;
     }

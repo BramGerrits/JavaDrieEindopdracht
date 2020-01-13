@@ -5,7 +5,12 @@ public class Coin implements Purchaseable {
      * Get the price of one coin.
      * @return The price of one coin
      */
-    public static double getPrice() {
+    @Override
+    public double getPrice() {
+        return this.price;
+    }
+
+    public static double getDefaultPrice() {
         return price;
     }
 

@@ -1,7 +1,9 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Visitor {
     private ArrayList<Coin> coins;
+    private ArrayList<Drink> drinks;
 
     /**
      * The constructor of the visitor.
@@ -9,14 +11,19 @@ public class Visitor {
      */
     public Visitor() {
         this.coins = new ArrayList<Coin>();
+        this.drinks = new ArrayList<Drink>();
     }
 
     /**
-     * Get the amount of coins form the visitor.
-     * @return The amount of coins form the visitor.
+     * Get the ArrayList with all the coins form the visitor.
+     * @return The ArrayList with all the coins form the visitor.
      */
-    public int getCoins() {
-        return this.coins.size();
+    public ArrayList<Coin> getCoins() {
+        return this.coins;
+    }
+
+    public ArrayList<Drink> getDrinks() {
+        return this.drinks;
     }
 
     /**
@@ -27,14 +34,5 @@ public class Visitor {
         for (int i = 0; i < amount; i++) {
             this.coins.add(new Coin());
         }
-    }
-
-    /**
-     * Lets the visitor buy a drink with a coin
-     * @param drink The drink the visitor wants to buy
-     */
-    public void buyDrink(Drink drink) {
-        double price = drink.getPrice();
-        int priceInCoins = 1;
     }
 }

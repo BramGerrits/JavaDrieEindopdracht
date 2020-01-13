@@ -1,5 +1,5 @@
-public abstract class Drink implements Orderable, Purchaseable{
-    private static double price = 0.0;
+public abstract class Drink implements Orderable, Purchaseable {
+    private double price = 0.0;
     private boolean isProcured = false;
     private boolean isOrdered = false;
 
@@ -7,12 +7,16 @@ public abstract class Drink implements Orderable, Purchaseable{
         this.price = price;
     }
 
-    /**
-     * Gets the price in euro's.
-     * @return
-     */
-    public double getPrice(){
-        return price;
+    public double getPrice() {
+        return this.price;
+    }
+
+    public boolean checkIfProcured() {
+        return this.isProcured;
+    }
+
+    public void setProcured() {
+        this.isProcured = true;
     }
 
     /**
