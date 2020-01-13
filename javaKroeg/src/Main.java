@@ -8,8 +8,20 @@ public class Main {
         //event.hireArtist(sjors);
 
         sjors.orderedBy(event);
-
         event.printAllArtistForEvent();
+
+        Visitor bram = new Visitor();
+        event.addVisitor(bram);
+
+        bram.buyCoins(2);
+
+        System.out.println(bram.getCoins().size());
+
+        Coin coin = new Coin();
+        coin.sellTo(bram);
+
+        System.out.println(bram.getCoins().size());
+
         System.out.println(event.getAmountOfVisitors());
     }
 }

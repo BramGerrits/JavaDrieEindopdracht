@@ -1,5 +1,5 @@
 public class Coin implements Purchaseable {
-    private final double price = 2.50;
+    private final static double price = 2.50;
 
     /**
      * Get the price of one coin.
@@ -14,6 +14,6 @@ public class Coin implements Purchaseable {
      * @param visitor Visitor
      */
     public void sellTo(Visitor visitor) {
-
+        visitor.getCoins().add(this);
     }
 }
