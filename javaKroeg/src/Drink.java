@@ -1,5 +1,5 @@
 public abstract class Drink implements Orderable, Purchaseable{
-    private double price = 0.0;
+    private static double price = 0.0;
     private boolean isProcured = false;
     private boolean isOrdered = false;
 

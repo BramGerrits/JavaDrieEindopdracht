@@ -1,4 +1,8 @@
 public interface Purchaseable {
-    public double getPrice();
+    final static double price = 0.0;
+
+    public static double getPrice(){
+        return price;
+    }
     public void sellTo(Visitor visitor);
 }

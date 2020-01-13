@@ -5,7 +5,7 @@ public class Coin implements Purchaseable {
      * Get the price of one coin.
      * @return The price of one coin
      */
-    public double getPrice() {
+    public static double getPrice() {
         return price;
     }
 
