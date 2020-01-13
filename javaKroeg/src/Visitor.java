@@ -3,12 +3,20 @@ import java.util.ArrayList;
 public class Visitor {
     private ArrayList<Coin> coins;
 
+    /**
+     * The constructor of the visitor.
+     * Makes an ArrayList with all the coins from the visitor.
+     */
     public Visitor() {
         this.coins = new ArrayList<Coin>();
     }
 
-    public ArrayList<Coin> getCoins() {
-        return this.coins;
+    /**
+     * Get the amount of coins form the visitor.
+     * @return The amount of coins form the visitor.
+     */
+    public int getCoins() {
+        return this.coins.size();
     }
 
     /**
