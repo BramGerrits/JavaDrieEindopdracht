@@ -15,12 +15,12 @@ public class Main {
 
         bram.buyCoins(2);
 
-        System.out.println(bram.getCoins().size());
+        System.out.println(bram.getCoins());
 
         Coin coin = new Coin();
         coin.sellTo(bram);
 
-        System.out.println(bram.getCoins().size());
+        System.out.println(bram.getCoins());
 
         System.out.println(event.getAmountOfVisitors());
     }
