@@ -30,10 +30,18 @@ public class Pub {
 
     /**
      * Gets all the events of this pub.
-     * @return Pub name
+     * @return events
      */
     public ArrayList<Event> getEvents() {
         return this.events;
+    }
+
+    /**
+     * Gets all the drinks of this pub.
+     * @return drinks
+     */
+    public ArrayList<Drink> getDrinks() {
+        return this.drinks;
     }
 
     /**
@@ -143,19 +151,24 @@ public class Pub {
      */
     public void sellDrinkToVisitor(Drink boughtDrink, Visitor visitor) {
         if(boughtDrink != null) {
-            double price = boughtDrink.getPrice();
-            double coinPrice = Coin.getDefaultPrice();
+            if(this.drinks.contains(boughtDrink)) {
+                double price = boughtDrink.getPrice();
+                double coinPrice = Coin.getDefaultPrice();
 
-            int priceInCoins = (int) Math.ceil(price / coinPrice);
-            if (visitor.getCoins().size() >= priceInCoins) {
-                for (int i = 0; i < priceInCoins; i++) {
-                    visitor.getCoins().remove(0);
+                int priceInCoins = (int) Math.ceil(price / coinPrice);
+                if (visitor.getCoins().size() >= priceInCoins) {
+                    for (int i = 0; i < priceInCoins; i++) {
+                        visitor.getCoins().remove(0);
+                    }
+                    visitor.getDrinks().add(boughtDrink);
+                    this.drinks.remove(this.drinks.indexOf(boughtDrink));
+                    System.out.println(this.drinks);
+                } else {
+                    System.out.println("Keen keld wel honger");
                 }
-                visitor.getDrinks().add(boughtDrink);
-                this.drinks.remove(this.drinks.indexOf(boughtDrink));
-                System.out.println(this.drinks);
-            } else {
-                System.out.println("Keen keld wel honger");
+            }
+            else{
+                System.out.println("Drankje is niet ingekocht door pub");
             }
         } else {
             System.out.println("Drinken is opppprdepop");
