@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class VisitorTest {
+    protected Visitor visitor = new Visitor();
+    protected Pub pub = new Pub("Zwetser", 100.00);
+    protected Beer beer = new Beer();
 
     @Test
     public void getCoins() {
-        Pub pub = new Pub("Zwetser", 100.00);
-        Visitor visitor = new Visitor();
         pub.sellCoinsToVisitor(2, visitor);
 
         assertEquals(2, visitor.getCoins().size());
@@ -17,9 +18,6 @@ public class VisitorTest {
 
     @Test
     public void getDrinks() {
-        Pub pub = new Pub("Zwetser", 100.00);
-        Visitor visitor = new Visitor();
-        Beer beer = new Beer();
         ArrayList<Drink> drinks = new ArrayList<Drink>();
 
         pub.sellCoinToVisitor(new Coin(), visitor);
@@ -35,8 +33,6 @@ public class VisitorTest {
 
     @Test
     public void buyCoins() {
-        Visitor visitor = new Visitor();
-
         visitor.buyCoins(2);
         assertEquals(2, visitor.getCoins().size());
     }

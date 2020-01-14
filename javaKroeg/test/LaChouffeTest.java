@@ -3,19 +3,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LaChouffeTest {
+    protected LaChouffe laChouffe = new LaChouffe();
+    protected Pub pub = new Pub("Zwetser", 1000.00);
+    protected Visitor visitor = new Visitor();
 
     @Test
     public void getPrice() {
-        LaChouffe laChouffe = new LaChouffe();
         assertEquals(laChouffe.getPrice(), 2.50);
     }
 
     @Test
     public void sellTo() {
-        LaChouffe laChouffe = new LaChouffe();
-        Pub pub = new Pub("kroeg", 1000.00);
-        Visitor visitor = new Visitor();
-
         pub.procureOneDrink(laChouffe);
         pub.sellCoinsToVisitor(10, visitor);
 
@@ -25,7 +23,6 @@ public class LaChouffeTest {
 
     @Test
     public void getDrinkSound() {
-        LaChouffe laChouffe = new LaChouffe();
         assertEquals(laChouffe.getDrinkSound(), "KLONK");
     }
 }

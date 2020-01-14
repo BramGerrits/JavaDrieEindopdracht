@@ -3,19 +3,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class WineTest {
+    protected Pub pub = new Pub("kroeg", 1000);
+    protected Wine wine = new Wine();
+    protected Visitor visitor = new Visitor();
 
     @Test
     public void getPrice() {
-        Wine wine = new Wine();
         assertEquals(wine.getPrice(), 2.50);
     }
 
     @Test
     public void sellTo() {
-        Wine wine = new Wine();
-        Pub pub = new Pub("kroeg", 1000.00);
-        Visitor visitor = new Visitor();
-
         pub.procureOneDrink(wine);
         pub.sellCoinsToVisitor(10, visitor);
 
@@ -25,7 +23,6 @@ public class WineTest {
 
     @Test
     public void getDrinkSound() {
-        Wine wine = new Wine();
         assertEquals(wine.getDrinkSound(), "SLUUUUUUUUUUUUUURP");
     }
 }
