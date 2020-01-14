@@ -30,7 +30,7 @@ public class Artist implements Orderable{
     }
 
     /**
-     * Gets the pub that hired the artist.
+     * Orders the artist and adds it to an event
      * @param event Event Object
      */
     public void orderedBy(Event event) {
