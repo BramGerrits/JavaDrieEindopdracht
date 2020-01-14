@@ -1,4 +1,4 @@
 public interface Purchaseable {
     double getPrice();
-    void sellTo(Visitor visitor);
+    void sellTo(Pub pub, Visitor visitor);
 }

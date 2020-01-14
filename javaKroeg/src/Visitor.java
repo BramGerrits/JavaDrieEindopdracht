@@ -8,6 +8,7 @@ public class Visitor {
     /**
      * The constructor of the visitor.
      * Makes an ArrayList with all the coins from the visitor.
+     * Makes an ArrayList with all the drinks bought by the visitor.
      */
     public Visitor() {
         this.coins = new ArrayList<Coin>();
@@ -22,6 +23,10 @@ public class Visitor {
         return this.coins;
     }
 
+    /**
+     * Get the ArrayList with all the drinks form the visitor.
+     * @return The ArrayList with all the drinks form the visitor.
+     */
     public ArrayList<Drink> getDrinks() {
         return this.drinks;
     }

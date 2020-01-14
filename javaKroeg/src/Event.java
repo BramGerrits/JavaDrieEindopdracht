@@ -10,6 +10,8 @@ public class Event {
 
     /**
      * The constructor for an event.
+     * Sets name for the event.
+     * Adds the HashSets for visitors and artists.
      * @param name The name of the event
      */
     public Event(String name) {
@@ -26,12 +28,16 @@ public class Event {
         return this.name;
     }
 
+    /**
+     * Gets the HashSet with all the artist that are hired for the Event.
+     * @return HashSet Artists
+     */
     public HashSet<Artist> getArtists() {
         return this.artists;
     }
 
     /**
-     * Adds a visitor to the event.
+     * Adds a visitor to the event and update the profit by getting the entryPrice.
      * @param visitor Visitor Object
      */
     public void addVisitor(Visitor visitor) {
@@ -47,12 +53,10 @@ public class Event {
         return this.visitors.size();
     }
 
-    public void printAllArtistForEvent(){
-        for (Artist artist : artists) {
-            System.out.println(artist.getName() + " - " + artist.getPrice());
-        }
-    }
-
+    /**
+     * Hires the artist to the event. The artist is paid.
+     * @param artist Artist Object
+     */
     public void hireArtist(Artist artist){
         if(!this.artists.contains(artist)) {
             this.artists.add(artist);
@@ -62,10 +66,18 @@ public class Event {
         }
     }
 
+    /**
+     * Get the total spendings.
+     * @return the total spendings
+     */
     public double getSpendings(){
         return this.spendings;
     }
 
+    /**
+     * Gets the total profit.
+     * @return the total profit
+     */
     public double getProfit(){
         return this.profit;
     }

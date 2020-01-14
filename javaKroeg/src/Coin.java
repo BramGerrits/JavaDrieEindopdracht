@@ -10,15 +10,20 @@ public class Coin implements Purchaseable {
         return this.price;
     }
 
+    /**
+     * Gets the default price of one coin
+     * @return The default price of one coin
+     */
     public static double getDefaultPrice() {
         return price;
     }
 
     /**
-     * Sell coin to a visitor.
-     * @param visitor Visitor
+     * Sells the coin from the pub to the visitor.
+     * @param pub The pub that has the coin
+     * @param visitor The visitor that bought the coin
      */
-    public void sellTo(Visitor visitor) {
-        visitor.getCoins().add(this);
+    public void sellTo(Pub pub, Visitor visitor) {
+        pub.sellCoinToVisitor(this, visitor);
     }
 }

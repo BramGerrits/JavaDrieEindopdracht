@@ -11,9 +11,4 @@ public class Wine extends Drink {
     public void orderedBy(Event event) {
 
     }
-
-    @Override
-    public void sellTo(Visitor visitor) {
-
-    }
 }
