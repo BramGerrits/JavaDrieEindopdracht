@@ -4,8 +4,9 @@ public class Event {
     private String name;
     private HashSet<Visitor> visitors;
     private HashSet<Artist> artists;
-    private double costs = 0.0;
+    private double spendings = 0.0;
     private double profit = 0.0;
+    private final double entryPrice = 10.00;
 
     /**
      * The constructor for an event.
@@ -35,6 +36,7 @@ public class Event {
      */
     public void addVisitor(Visitor visitor) {
         visitors.add(visitor);
+        profit += entryPrice;
     }
 
     /**
@@ -49,5 +51,22 @@ public class Event {
         for (Artist artist : artists) {
             System.out.println(artist.getName() + " - " + artist.getPrice());
         }
+    }
+
+    public void hireArtist(Artist artist){
+        if(!this.artists.contains(artist)) {
+            this.artists.add(artist);
+            spendings += artist.getPrice();
+        } else{
+            System.out.println("Artiest is al ingehuurd voor dit evenement");
+        }
+    }
+
+    public double getSpendings(){
+        return this.spendings;
+    }
+
+    public double getProfit(){
+        return this.profit;
     }
 }

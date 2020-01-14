@@ -47,16 +47,22 @@ public class Pub {
      * @return if the pub is bankrupt
      */
     public boolean checkIfBankrupt() {
-        return false;
+        if (budget < 0){
+            return true;
+        } else{
+            return false;
+        }
     }
 
     public void procureOneDrink(Drink drink) {
-        if(this.budget > drink.getPrice()) {
-            this.budget -= drink.getPrice();
-            drink.setProcured();
-            this.drinks.add(drink);
-        } else {
-            System.out.println("Niet genoeg keld");
+        if(!checkIfBankrupt()) {
+            if (this.budget > drink.getPrice()) {
+                this.budget -= drink.getPrice();
+                drink.setProcured();
+                this.drinks.add(drink);
+            } else {
+                System.out.println("Niet genoeg keld");
+            }
         }
     }
 
@@ -82,6 +88,11 @@ public class Pub {
                     break;
             }
         }
+    }
+
+    public void sellCoinsToVisitor(int amount, Visitor visitor){
+        visitor.buyCoins(amount);
+        this.budget += Coin.getDefaultPrice() * amount;
     }
 
     public void sellDrinkToVisitor(DrinkType drinkType, Visitor visitor) {
@@ -134,5 +145,10 @@ public class Pub {
                 break;
         }
         return null;
+    }
+
+    public void closeEvent(Event event){
+        double totalProfit = event.getProfit() - event.getSpendings();
+        this.budget += totalProfit;
     }
 }

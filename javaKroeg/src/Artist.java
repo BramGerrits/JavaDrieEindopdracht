@@ -34,6 +34,6 @@ public class Artist implements Orderable{
      * @param event Event Object
      */
     public void orderedBy(Event event) {
-        event.getArtists().add(this);
+        event.hireArtist(this);
     }
 }

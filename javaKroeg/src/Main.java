@@ -5,34 +5,31 @@ public class Main {
         zwetser.addEvent(event);
 
         Artist sjors = new Artist("Sjors", 2.88);
-        //event.hireArtist(sjors);
-
+        event.hireArtist(sjors);
         sjors.orderedBy(event);
-        event.printAllArtistForEvent();
 
         Visitor bram = new Visitor();
         event.addVisitor(bram);
+        zwetser.sellCoinsToVisitor(2, bram);
 
-        bram.buyCoins(2);
-
-        System.out.println("Coins: " + bram.getCoins().size());
-
-        Beer biertjs = new Beer();
-
-        System.out.println("Coins: " + bram.getCoins().size());
+        System.out.println("Coins van Bram: " + bram.getCoins().size());
 
         zwetser.procureDrink(DrinkType.BEER, 2);
-
-        System.out.println(zwetser.getTotalBudget());
+        System.out.println();
+        System.out.println("Huidige budget: " + zwetser.getTotalBudget());
 
         zwetser.sellDrinkToVisitor(DrinkType.BEER, bram);
         zwetser.sellDrinkToVisitor(DrinkType.BEER, bram);
         zwetser.sellDrinkToVisitor(DrinkType.BEER, bram);
 
-        System.out.println("Coins: " + bram.getCoins().size());
+        System.out.println("Profit: " + event.getProfit());
+        System.out.println("Spendings: " + event.getSpendings());
 
+        zwetser.closeEvent(event);
 
-
-        System.out.println(event.getAmountOfVisitors());
+        System.out.println("Huidige budget: " + zwetser.getTotalBudget());
+        System.out.println("Aantal bezoekers: " + event.getAmountOfVisitors());
+        System.out.println();
+        System.out.println("Coins van Bram: " + bram.getCoins().size());
     }
 }
