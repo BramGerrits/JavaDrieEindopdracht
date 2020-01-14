@@ -29,6 +29,14 @@ public class Pub {
     }
 
     /**
+     * Gets all the events of this pub.
+     * @return Pub name
+     */
+    public ArrayList<Event> getEvents() {
+        return this.events;
+    }
+
+    /**
      * Adds an event that will take place at the pub.
      * @param event Event object
      */

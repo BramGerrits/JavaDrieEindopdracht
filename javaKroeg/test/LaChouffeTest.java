@@ -17,6 +17,7 @@ public class LaChouffeTest {
         Visitor visitor = new Visitor();
 
         pub.procureOneDrink(laChouffe);
+        pub.sellCoinsToVisitor(10, visitor);
 
         laChouffe.sellTo(pub, visitor);
         assertEquals(visitor.getDrinks().size(),1);

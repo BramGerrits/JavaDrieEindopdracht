@@ -6,10 +6,16 @@ public class PubTest {
 
     @Test
     public void getName() {
+        Pub pub = new Pub("Zwetser", 100);
+        assertEquals(pub.getName(), "Zwetser");
     }
 
     @Test
     public void addEvent() {
+        Pub pub = new Pub("Zwetser", 100);
+        Event event = new Event("Gala");
+        pub.addEvent(event);
+        assertEquals(pub.getName(), "Zwetser");
     }
 
     @Test
