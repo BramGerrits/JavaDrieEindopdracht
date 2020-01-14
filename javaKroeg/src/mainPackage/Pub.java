@@ -144,9 +144,13 @@ public class Pub {
      * @param drinkType The kind of drink that the visitor wants
      * @param visitor The visitor that orders a drink
      */
-    public void sellDrinkToVisitor(DrinkType drinkType, Visitor visitor) throws PubException {
+    public void sellDrinkToVisitor(DrinkType drinkType, Visitor visitor) {
         Drink boughtDrink = getAvailableDrink(drinkType);
-        sellDrinkToVisitor(boughtDrink, visitor);
+        try {
+            sellDrinkToVisitor(boughtDrink, visitor);
+        } catch(PubException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     /**
