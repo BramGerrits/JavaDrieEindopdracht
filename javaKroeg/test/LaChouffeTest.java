@@ -27,8 +27,4 @@ public class LaChouffeTest {
         LaChouffe laChouffe = new LaChouffe();
         assertEquals(laChouffe.getDrinkSound(), "KLONK");
     }
-
-    @Test
-    public void orderedBy() {
-    }
 }

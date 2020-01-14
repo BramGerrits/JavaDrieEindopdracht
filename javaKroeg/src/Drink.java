@@ -1,4 +1,4 @@
-public abstract class Drink implements Orderable, Purchaseable {
+public abstract class Drink implements Purchaseable {
     private double price = 0.0;
     private boolean isOrdered = false;
 

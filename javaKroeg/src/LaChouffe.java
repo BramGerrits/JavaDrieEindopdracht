@@ -9,6 +9,6 @@ public class LaChouffe extends Drink {
 
     @Override
     public void orderedBy(Event event) {
-
+        
     }
 }
