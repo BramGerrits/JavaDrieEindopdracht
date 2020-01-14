@@ -1,5 +1,7 @@
 package mainPackage;
 
+import mainPackage.drinks.DrinkType;
+
 public class Main {
     public static void main(String[] args){
         Pub zwetser = new Pub("Zwetser", 1000);

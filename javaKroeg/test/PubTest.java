@@ -1,4 +1,5 @@
 import mainPackage.drinks.Drink;
+import mainPackage.drinks.DrinkType;
 import mainPackage.drinks.LaChouffe;
 import mainPackage.*;
 import org.junit.jupiter.api.Test;

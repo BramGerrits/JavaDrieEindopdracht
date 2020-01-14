@@ -1,4 +1,4 @@
-package mainPackage;
+package mainPackage.drinks;
 
 public enum DrinkType {
     BEER,

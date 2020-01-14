@@ -1,9 +1,6 @@
 package mainPackage;
 
-import mainPackage.drinks.Beer;
-import mainPackage.drinks.Drink;
-import mainPackage.drinks.LaChouffe;
-import mainPackage.drinks.Wine;
+import mainPackage.drinks.*;
 
 import java.util.ArrayList;
 
