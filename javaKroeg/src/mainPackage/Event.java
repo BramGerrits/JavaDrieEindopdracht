@@ -1,3 +1,5 @@
+package mainPackage;
+
 import java.util.HashSet;
 
 public class Event {

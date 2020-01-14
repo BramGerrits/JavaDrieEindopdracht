@@ -1,4 +1,7 @@
-import java.lang.reflect.Array;
+package mainPackage;
+
+import mainPackage.drinks.Drink;
+
 import java.util.ArrayList;
 
 public class Visitor {

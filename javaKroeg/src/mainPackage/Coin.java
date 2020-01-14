@@ -1,3 +1,5 @@
+package mainPackage;
+
 public class Coin implements Purchaseable {
     private final static double price = 2.50;
 

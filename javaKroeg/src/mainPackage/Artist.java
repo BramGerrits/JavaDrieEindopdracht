@@ -1,3 +1,5 @@
+package mainPackage;
+
 public class Artist implements Orderable{
     private String name;
     private double price;

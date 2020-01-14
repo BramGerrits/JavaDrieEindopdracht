@@ -1,3 +1,7 @@
+import mainPackage.Artist;
+import mainPackage.Event;
+import mainPackage.Pub;
+import mainPackage.Visitor;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;

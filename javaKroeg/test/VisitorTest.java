@@ -1,3 +1,8 @@
+import mainPackage.drinks.Beer;
+import mainPackage.drinks.Drink;
+import mainPackage.Coin;
+import mainPackage.Pub;
+import mainPackage.Visitor;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

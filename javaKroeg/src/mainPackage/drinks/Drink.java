@@ -1,3 +1,7 @@
+package mainPackage.drinks;
+
+import mainPackage.*;
+
 public abstract class Drink implements Purchaseable {
     private double price = 0.0;
     private boolean isOrdered = false;

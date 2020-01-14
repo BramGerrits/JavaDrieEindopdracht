@@ -1,3 +1,10 @@
+package mainPackage;
+
+import mainPackage.drinks.Beer;
+import mainPackage.drinks.Drink;
+import mainPackage.drinks.LaChouffe;
+import mainPackage.drinks.Wine;
+
 import java.util.ArrayList;
 
 public class Pub {
