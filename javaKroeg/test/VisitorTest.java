@@ -23,6 +23,10 @@ public class VisitorTest {
         ArrayList<Drink> drinks = new ArrayList<Drink>();
 
         pub.sellCoinToVisitor(new Coin(), visitor);
+        pub.sellCoinToVisitor(new Coin(), visitor);
+
+        pub.procureOneDrink(beer);
+
         pub.sellDrinkToVisitor(beer, visitor);
         drinks.add(beer);
 
