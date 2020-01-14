@@ -1,6 +1,7 @@
 package mainPackage;
 
-import mainPackage.drinks.Beer;
+
+import mainPackage.drinks.*;
 import mainPackage.exceptions.PubException;
 
 public class Main {
