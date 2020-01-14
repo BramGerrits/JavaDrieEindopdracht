@@ -1,6 +1,7 @@
 import mainPackage.drinks.Wine;
 import mainPackage.Pub;
 import mainPackage.Visitor;
+import mainPackage.exceptions.PubException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,7 +17,7 @@ public class WineTest {
     }
 
     @Test
-    public void sellTo() {
+    public void sellTo() throws PubException {
         pub.procureOneDrink(wine);
         pub.sellCoinsToVisitor(10, visitor);
 

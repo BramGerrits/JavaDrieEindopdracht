@@ -3,6 +3,7 @@ import mainPackage.drinks.Drink;
 import mainPackage.Coin;
 import mainPackage.Pub;
 import mainPackage.Visitor;
+import mainPackage.exceptions.PubException;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class VisitorTest {
     }
 
     @Test
-    public void getDrinks() {
+    public void getDrinks() throws PubException {
         ArrayList<Drink> drinks = new ArrayList<Drink>();
 
         pub.sellCoinToVisitor(new Coin(), visitor);

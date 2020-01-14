@@ -1,7 +1,10 @@
 package mainPackage;
 
+import mainPackage.drinks.Beer;
+import mainPackage.exceptions.PubException;
+
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws PubException {
         Pub zwetser = new Pub("Zwetser", 1000);
         Event event = new Event("Kerst Gala");
         zwetser.addEvent(event);
@@ -23,6 +26,7 @@ public class Main {
         zwetser.sellDrinkToVisitor(DrinkType.BEER, bram);
         zwetser.sellDrinkToVisitor(DrinkType.BEER, bram);
         zwetser.sellDrinkToVisitor(DrinkType.BEER, bram);
+        zwetser.sellDrinkToVisitor(new Beer(), bram);
 
         System.out.println("Profit: " + event.getProfit());
         System.out.println("Spendings: " + event.getSpendings());

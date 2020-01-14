@@ -4,6 +4,7 @@ import mainPackage.drinks.Beer;
 import mainPackage.drinks.Drink;
 import mainPackage.drinks.LaChouffe;
 import mainPackage.drinks.Wine;
+import mainPackage.exceptions.PubException;
 
 import java.util.ArrayList;
 
@@ -145,7 +146,7 @@ public class Pub {
      * @param drinkType The kind of drink that the visitor wants
      * @param visitor The visitor that orders a drink
      */
-    public void sellDrinkToVisitor(DrinkType drinkType, Visitor visitor) {
+    public void sellDrinkToVisitor(DrinkType drinkType, Visitor visitor) throws PubException {
         Drink boughtDrink = getAvailableDrink(drinkType);
         sellDrinkToVisitor(boughtDrink, visitor);
     }
@@ -156,7 +157,7 @@ public class Pub {
      * @param boughtDrink The drink object the visitor bought
      * @param visitor The visitor that bought a drink
      */
-    public void sellDrinkToVisitor(Drink boughtDrink, Visitor visitor) {
+    public void sellDrinkToVisitor(Drink boughtDrink, Visitor visitor) throws PubException {
         if(boughtDrink != null) {
             if(this.drinks.contains(boughtDrink)) {
                 double price = boughtDrink.getPrice();
@@ -175,7 +176,7 @@ public class Pub {
                 }
             }
             else{
-                System.out.println("Drankje is niet ingekocht door pub");
+                throw new PubException("Drankje is niet ingekocht door pub");
             }
         } else {
             System.out.println("Drinken is opppprdepop");

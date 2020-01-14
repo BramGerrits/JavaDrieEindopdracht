@@ -1,6 +1,7 @@
 import mainPackage.drinks.Drink;
 import mainPackage.drinks.LaChouffe;
 import mainPackage.*;
+import mainPackage.exceptions.PubException;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -87,7 +88,7 @@ public class PubTest {
     }
 
     @Test
-    public void sellDrinkToVisitor() {
+    public void sellDrinkToVisitor() throws PubException {
         pub.sellCoinsToVisitor(3, visitor);
 
         pub.procureDrink(DrinkType.BEER, 3);
@@ -100,7 +101,7 @@ public class PubTest {
     }
 
     @Test
-    public void sellDrinkToVisitor1() {
+    public void sellDrinkToVisitor1() throws PubException {
         pub.procureOneDrink(drink);
         pub.sellCoinToVisitor(coin, visitor);
         pub.sellCoinsToVisitor(1, visitor);

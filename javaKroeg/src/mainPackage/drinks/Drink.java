@@ -1,6 +1,7 @@
 package mainPackage.drinks;
 
 import mainPackage.*;
+import mainPackage.exceptions.PubException;
 
 public abstract class Drink implements Purchaseable {
     private double price = 0.0;
@@ -28,7 +29,7 @@ public abstract class Drink implements Purchaseable {
      * @param pub The pub that has the drink
      * @param visitor The visitor that bought the drink
      */
-    public void sellTo(Pub pub, Visitor visitor) {
+    public void sellTo(Pub pub, Visitor visitor) throws PubException {
         pub.sellDrinkToVisitor(this, visitor);
     }
 
